@@ -4,4 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-server',
   templateUrl: './server.component.html',
 })
-export class ServerComponent {}
+export class ServerComponent {
+  serverid = 10;
+  serverStatus = "Newserver";
+  getServerStatus() { 
+    return this.serverStatus;
+  }
+}
