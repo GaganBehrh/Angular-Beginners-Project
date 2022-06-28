@@ -1,3 +1,5 @@
-<button [disabled]="!allowNewUser">Add me</button>
+<button [disabled]="!allowNewUser" (click)="onCreateServer()">Add me</button>
+<!--<p [innerText]="allowNewUser"></p>-->
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
