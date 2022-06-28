@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewUser = false;
-  serverCreationStatus="No Server was created"
-//after 2000 sec the button status changes
+  serverCreationStatus = 'No Server was created';
+  serverName = '';
+  //after 2000 sec the button status changes
   constructor() {
-    setTimeout(() => { this.allowNewUser=true}, 2000);
+    setTimeout(() => {
+      this.allowNewUser = true;
+    }, 2000);
   }
-  ngOnInit(): void { }
-  
-  onCreateServer() { 
-    this.serverCreationStatus = "Server was created";
+  ngOnInit(): void {}
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created';
+  }
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 }
