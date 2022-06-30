@@ -10,6 +10,13 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No Server was created';
   serverName = '';
   serverCreated = false;
+  servers = [
+    'TestServer1',
+    'TestServer2',
+    'TestServer3',
+    'TestServer3',
+    'TestServer3',
+  ];
   //after 2000 sec the button status changes
   constructor() {
     setTimeout(() => {
@@ -20,6 +27,8 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
+    // to push the server
+    this.servers.push(this.serverName);
     this.serverCreationStatus =
       'Server was created. Name of the server is ' + this.serverName;
   }
