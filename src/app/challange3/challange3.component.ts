@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-challange3',
   templateUrl: './challange3.component.html',
@@ -17,7 +16,7 @@ export class Challange3Component implements OnInit {
   constructor() {}
   OnclickDisplayDetail() {
     this.messageappearance = true;
-    this.log.push(this.log.length + 1);
+    this.log.push(new Date);
   }
   ngOnInit(): void {}
 }

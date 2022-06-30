@@ -2,7 +2,10 @@
 <p *ngIf="messageappearance">Secret Passwod=tuna</p>
 <div
   *ngFor="let logitems of log"
-  [ngstyle]="{ backgroundColor: logitems >= 5 ? 'blue' : 'white' }"
+  let
+  i="index"
+  [ngClass]="{ appearance: index >= 5 }"
+  [ngstyle]="{ backgroundColor: index >= 5 ? 'blue' : 'white' }"
 >
   {{ logitems }}
 </div>
