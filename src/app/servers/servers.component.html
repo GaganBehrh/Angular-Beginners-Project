@@ -4,11 +4,12 @@
 <input type="text" class="form-control"
 (input)="onUpdateServerName($event)">-->
 <!--two way binding suing ngModel-->
-<input type="text" class="form-control"
-[(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<!--<p>{{ serverName }}</p>-->
 <button [disabled]="!allowNewUser" (click)="onCreateServer()">Add me</button>
 <!--<p [innerText]="allowNewUser"></p>-->
-<p>{{ serverCreationStatus }}</p>
+<!--<p>{{ serverCreationStatus }}</p>-->
+<!--Directives-->
+<p *ngIf="serverCreated">Server was created {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>

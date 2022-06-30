@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   allowNewUser = false;
   serverCreationStatus = 'No Server was created';
   serverName = '';
+  serverCreated = false;
   //after 2000 sec the button status changes
   constructor() {
     setTimeout(() => {
@@ -18,7 +19,9 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created. Name of the server is '+this.serverName;
+    this.serverCreated = true;
+    this.serverCreationStatus =
+      'Server was created. Name of the server is ' + this.serverName;
   }
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
