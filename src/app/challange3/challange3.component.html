@@ -1,0 +1,8 @@
+<button (click)="OnclickDisplayDetail()">Display Details</button>
+<p *ngIf="messageappearance">Secret Passwod=tuna</p>
+<div
+  *ngFor="let logitems of log"
+  [ngstyle]="{ backgroundColor: logitems >= 5 ? 'blue' : 'white' }"
+>
+  {{ logitems }}
+</div>

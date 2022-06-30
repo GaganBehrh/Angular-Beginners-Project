@@ -7,9 +7,10 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { Challange2Component } from './challange2/challange2.component';
+import { Challange3Component } from './challange3/challange3.component';
 
 @NgModule({
-  declarations: [AppComponent, ServerComponent, ServersComponent, WarningAlertComponent, SuccessAlertComponent, Challange2Component],
+  declarations: [AppComponent, ServerComponent, ServersComponent, WarningAlertComponent, SuccessAlertComponent, Challange2Component, Challange3Component],
   imports: [BrowserModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
